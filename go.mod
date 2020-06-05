@@ -1,4 +1,4 @@
-module github.com/yohaha1202/api-gogohelp
+module github.com/gogohelp/api-gogohelp
 
 go 1.14
 
