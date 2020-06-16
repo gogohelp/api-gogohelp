@@ -10,9 +10,13 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/gogohelp/api-gogohelp/internal/firebase"
 )
 
 func main() {
+	db := firebase.Init()
+	defer db.Close()
+
 	router := gin.Default()
 	router.GET("/health", func(c *gin.Context) {
 		c.Status(http.StatusOK)
